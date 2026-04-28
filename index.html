@@ -265,6 +265,7 @@
       display: flex;
       align-items: center;
       overflow: hidden;
+      padding-top: 70px;
     }
 
     .hero-bg {
@@ -301,16 +302,17 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(240,192,96,0.18);
-      border: 1px solid rgba(240,192,96,0.35);
+      background: rgba(200,135,10,0.22);
+      border: 1px solid rgba(240,192,96,0.5);
       color: var(--gold-light);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 2px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      padding: 7px 18px;
+      padding: 8px 20px;
       border-radius: 100px;
-      margin-bottom: 1.75rem;
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(8px);
     }
     .hero-pill-dot {
       width: 6px; height: 6px;
@@ -325,24 +327,28 @@
 
     .hero-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-size: clamp(3.2rem, 6.5vw, 6rem);
       font-weight: 700;
-      color: white;
-      line-height: 1.05;
+      color: #ffffff;
+      line-height: 1.02;
       margin-bottom: 1.5rem;
-      letter-spacing: -0.5px;
+      letter-spacing: -1px;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.4);
     }
     .hero-title em {
       font-style: italic;
       color: var(--gold-light);
+      text-shadow: 0 2px 24px rgba(200,135,10,0.4);
     }
 
     .hero-desc {
-      font-size: 1.1rem;
-      color: rgba(255,255,255,0.78);
+      font-size: 1.08rem;
+      color: rgba(255,255,255,0.92);
       line-height: 1.8;
-      max-width: 520px;
+      max-width: 500px;
       margin-bottom: 2.5rem;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+      font-weight: 400;
     }
 
     .hero-actions {
@@ -362,12 +368,18 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      color: rgba(255,255,255,0.65);
+      color: rgba(255,255,255,0.9);
       font-size: 0.82rem;
+      font-weight: 500;
+      background: rgba(0,0,0,0.25);
+      padding: 6px 14px;
+      border-radius: 100px;
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.1);
     }
     .hero-trust-item span:first-child {
       color: var(--gold-light);
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
 
     /* wave bottom */
@@ -428,6 +440,7 @@
       border-radius: var(--radius-lg);
       aspect-ratio: 3/4;
       object-fit: cover;
+      object-position: center top;
       box-shadow: var(--shadow-lg);
     }
     .about-accent-card {
@@ -1034,7 +1047,7 @@
       .stat-label { margin-top: 0; }
 
       /* about */
-      .about-main-img { aspect-ratio: 4/3; }
+      .about-main-img { aspect-ratio: 16/10; object-position: center 15%; }
       .about-pillars { grid-template-columns: 1fr 1fr; gap: 0.5rem; }
       .about-text p { font-size: 0.92rem; }
 
@@ -1141,6 +1154,7 @@
         Farming that<br>
         <em>Nourishes</em> the Earth
       </h1>
+      <div style="width:48px;height:2px;background:var(--gold);margin-bottom:1.5rem;border-radius:2px;opacity:0.8;"></div>
       <p class="hero-desc">
         Bio-organic fertilizers and natural pesticides crafted for Indian farmers — boosting yields, restoring soil health, and building a sustainable future.
       </p>
@@ -1383,7 +1397,7 @@
           <div class="blog-cat">Soil Health</div>
           <div class="blog-title">Why Soil Microbiome is the Secret to High Yields</div>
           <p class="blog-excerpt">Billions of microbes in healthy soil do more for your crop than any chemical. Here's how to protect and grow them.</p>
-          <a href="#" class="blog-read">Read more →</a>
+          <a href="https://link.springer.com/article/10.1007/s44279-025-00208-5" class="blog-read" target="_blank" rel="noopener">Read more →</a>
         </div>
       </div>
       <div class="blog-card reveal reveal-delay-1">
@@ -1394,7 +1408,7 @@
           <div class="blog-cat">Organic Practices</div>
           <div class="blog-title">How to Transition Your Farm to Organic in 3 Seasons</div>
           <p class="blog-excerpt">A practical step-by-step guide for Indian farmers moving away from chemical inputs without losing yield.</p>
-          <a href="#" class="blog-read">Read more →</a>
+          <a href="https://www.invadeagro.com/post/how-to-start-organic-farming-simple-transition-guide-india" class="blog-read" target="_blank" rel="noopener">Read more →</a>
         </div>
       </div>
       <div class="blog-card reveal reveal-delay-2">
@@ -1405,7 +1419,7 @@
           <div class="blog-cat">Pest Management</div>
           <div class="blog-title">Top 5 Bio-Pesticides Every Indian Farmer Should Know</div>
           <p class="blog-excerpt">Affordable, effective, and safe natural pest control options for your farm and your family.</p>
-          <a href="#" class="blog-read">Read more →</a>
+          <a href="https://agriculture.institute/organic-production-system/neem-versatile-botanical-pesticide/" class="blog-read" target="_blank" rel="noopener">Read more →</a>
         </div>
       </div>
     </div>
