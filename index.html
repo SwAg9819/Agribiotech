@@ -1009,6 +1009,11 @@
     /* ─── RESPONSIVE ─────────────────────────────────── */
 
     /* ── Tablet (≤900px) ── */
+    /* ── Desktop: show farmer's head in hero ── */
+    @media (min-width: 601px) {
+      .hero-bg-img { object-position: center top; }
+    }
+
     @media (max-width: 900px) {
       .about-grid,
       .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
