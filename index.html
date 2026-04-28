@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agri Biotech India — Organic Farming Solutions</title>
+  <meta name="description" content="AgriBiotech India — Organic fertilizers, bio-pesticides and sustainable farming solutions for Indian farmers.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- ================================================
+       EMAILJS SDK
+       Replace with your actual EmailJS public key below
+       Sign up at: https://www.emailjs.com/
+  ================================================ -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // ✅ EMAILJS SETUP — Replace 'YOUR_PUBLIC_KEY' with your EmailJS public key
+    (function () {
+      emailjs.init({ publicKey: "YOUR_PUBLIC_KEY" });
+    })();
+  </script>
+
+  <style>
+    /* ─── RESET ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    /* ─── TOKENS ─────────────────────────────────────── */
+    :root {
+      --ink:         #1a1a12;
+      --ink-mid:     #3d3828;
+      --ink-soft:    #6b6252;
+      --ink-faint:   #9e9485;
+
+      --leaf-900:    #1b3a0f;
+      --leaf-700:    #2e6318;
+      --leaf-500:    #4a8f28;
+      --leaf-300:    #87c45a;
+      --leaf-100:    #d6f0be;
+      --leaf-50:     #f0fae5;
+
+      --soil-900:    #2c1a08;
+      --soil-700:    #5c3515;
+      --soil-500:    #8b5a2b;
+      --soil-300:    #c49a6c;
+      --soil-100:    #ecdcca;
+      --soil-50:     #faf4ec;
+
+      --gold:        #c8870a;
+      --gold-light:  #f0c060;
+      --cream:       #fdfaf4;
+      --white:       #ffffff;
+
+      --radius-sm:   6px;
+      --radius-md:   12px;
+      --radius-lg:   20px;
+      --radius-xl:   32px;
+
+      --shadow-sm: 0 2px 8px rgba(26,26,18,0.08);
+      --shadow-md: 0 8px 24px rgba(26,26,18,0.12);
+      --shadow-lg: 0 20px 48px rgba(26,26,18,0.16);
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ─── TYPOGRAPHY ─────────────────────────────────── */
+    .display {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+    .serif { font-family: 'Cormorant Garamond', serif; }
+
+    /* ─── UTILITY ────────────────────────────────────── */
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 2rem; }
+    .section-pad { padding: 6rem 0; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--leaf-700);
+      margin-bottom: 1rem;
+    }
+    .eyebrow::before {
+      content: '';
+      width: 24px; height: 1.5px;
+      background: var(--leaf-500);
+      display: inline-block;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--leaf-900);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .section-sub {
+      font-size: 1rem;
+      color: var(--ink-soft);
+      max-width: 520px;
+      line-height: 1.75;
+    }
+
+    /* ─── BUTTONS ────────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 28px;
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.22s ease;
+      border: 2px solid transparent;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .btn-green {
+      background: var(--leaf-700);
+      color: white;
+      border-color: var(--leaf-700);
+    }
+    .btn-green:hover {
+      background: var(--leaf-900);
+      border-color: var(--leaf-900);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .btn-outline-white {
+      background: transparent;
+      color: white;
+      border-color: rgba(255,255,255,0.5);
+    }
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: white;
+      transform: translateY(-2px);
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: white;
+      border-color: var(--gold);
+    }
+    .btn-gold:hover {
+      background: #a36d06;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* ─── NAVBAR ─────────────────────────────────────── */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 999;
+      padding: 0 2rem;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    #navbar.scrolled {
+      background: rgba(27, 58, 15, 0.97);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .nav-brand-icon {
+      width: 42px; height: 42px;
+      background: var(--gold-light);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .nav-brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: white;
+      line-height: 1;
+    }
+    .nav-brand-tagline {
+      font-size: 0.6rem;
+      color: var(--gold-light);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: block;
+      margin-top: 2px;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+      letter-spacing: 0.3px;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a:hover { color: var(--gold-light); }
+    .nav-links .nav-cta {
+      background: var(--gold);
+      color: white !important;
+      padding: 9px 22px;
+      border-radius: 100px;
+      font-weight: 600;
+      transition: background 0.2s, transform 0.2s !important;
+    }
+    .nav-links .nav-cta:hover {
+      background: #a36d06;
+      transform: translateY(-1px);
+    }
+
+    /* hamburger mobile */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      width: 24px; height: 2px;
+      background: white;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* ─── HERO ───────────────────────────────────────── */
+    #hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(27,58,15,0.92) 0%, rgba(44,26,8,0.75) 60%, rgba(27,58,15,0.6) 100%),
+        url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1800&q=85') center/cover no-repeat;
+      z-index: 0;
+    }
+
+    /* subtle grain texture overlay */
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.3;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      animation: heroFadeUp 0.9s cubic-bezier(0.22,1,0.36,1) both;
+    }
+
+    @keyframes heroFadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(240,192,96,0.18);
+      border: 1px solid rgba(240,192,96,0.35);
+      color: var(--gold-light);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: 100px;
+      margin-bottom: 1.75rem;
+    }
+    .hero-pill-dot {
+      width: 6px; height: 6px;
+      background: var(--gold-light);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-weight: 700;
+      color: white;
+      line-height: 1.05;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.5px;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.8;
+      max-width: 520px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 3.5rem;
+    }
+
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.65);
+      font-size: 0.82rem;
+    }
+    .hero-trust-item span:first-child {
+      color: var(--gold-light);
+      font-size: 1rem;
+    }
+
+    /* wave bottom */
+    .hero-wave {
+      position: absolute;
+      bottom: -2px; left: 0; right: 0;
+      z-index: 2;
+    }
+
+    /* ─── STATS BAND ─────────────────────────────────── */
+    #stats {
+      background: var(--leaf-900);
+      padding: 2.5rem 0;
+    }
+    .stats-row {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .stat {
+      text-align: center;
+      padding: 0.5rem 1.5rem;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+    .stat:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      line-height: 1;
+      display: block;
+    }
+    .stat-label {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 4px;
+      display: block;
+    }
+
+    /* ─── ABOUT ──────────────────────────────────────── */
+    #about { background: var(--white); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .about-visual {
+      position: relative;
+    }
+    .about-main-img {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      box-shadow: var(--shadow-lg);
+    }
+    .about-accent-card {
+      position: absolute;
+      bottom: -2rem;
+      right: -2rem;
+      background: var(--leaf-900);
+      color: white;
+      padding: 1.5rem 2rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      min-width: 180px;
+    }
+    .about-accent-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      line-height: 1;
+      display: block;
+    }
+    .about-accent-label {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.65);
+      margin-top: 4px;
+      display: block;
+    }
+    .about-leaf-badge {
+      position: absolute;
+      top: -1.5rem;
+      left: -1.5rem;
+      width: 80px; height: 80px;
+      background: var(--leaf-100);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.2rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .about-text .section-title { margin-top: 0.5rem; }
+    .about-text p {
+      color: var(--ink-soft);
+      line-height: 1.85;
+      margin-bottom: 1rem;
+      font-size: 0.97rem;
+    }
+    .about-pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+      margin-top: 1.75rem;
+    }
+    .pillar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--ink-mid);
+      font-weight: 500;
+    }
+    .pillar-icon {
+      width: 28px; height: 28px;
+      background: var(--leaf-50);
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    /* ─── PRODUCTS ───────────────────────────────────── */
+    #products { background: var(--soil-50); }
+    .products-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 3rem;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.75rem;
+    }
+    .product-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--soil-100);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+    .product-thumb {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+    }
+    .product-thumb img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .product-card:hover .product-thumb img { transform: scale(1.08); }
+    .product-tag {
+      position: absolute;
+      top: 14px; left: 14px;
+      background: var(--leaf-900);
+      color: white;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 100px;
+    }
+    .product-body {
+      padding: 1.5rem;
+    }
+    .product-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--soil-900);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+    .product-desc {
+      font-size: 0.86rem;
+      color: var(--ink-soft);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+    .product-benefits {
+      list-style: none;
+      margin-bottom: 1.25rem;
+    }
+    .product-benefits li {
+      font-size: 0.82rem;
+      color: var(--leaf-700);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+    .product-benefits li::before {
+      content: '✓';
+      font-weight: 700;
+      color: var(--leaf-500);
+    }
+    .product-enquire {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--leaf-700);
+      transition: gap 0.2s, color 0.2s;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: 'DM Sans', sans-serif;
+      padding: 0;
+    }
+    .product-enquire:hover { gap: 10px; color: var(--leaf-500); }
+
+    /* ─── TESTIMONIALS ───────────────────────────────── */
+    #testimonials {
+      background: var(--leaf-900);
+      position: relative;
+      overflow: hidden;
+    }
+    #testimonials::before {
+      content: '"';
+      position: absolute;
+      top: -2rem; left: 2rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20rem;
+      color: rgba(255,255,255,0.03);
+      line-height: 1;
+      pointer-events: none;
+    }
+    .testi-header { margin-bottom: 3rem; }
+    .testi-header .eyebrow { color: var(--gold-light); }
+    .testi-header .eyebrow::before { background: var(--gold-light); }
+    .testi-header .section-title { color: white; }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .testi-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: background 0.25s;
+    }
+    .testi-card:hover { background: rgba(255,255,255,0.08); }
+    .testi-stars { color: var(--gold-light); font-size: 0.9rem; margin-bottom: 1rem; }
+    .testi-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.88);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.25rem;
+    }
+    .testi-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(240,192,96,0.4);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+    }
+    .testi-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: white;
+      display: block;
+    }
+    .testi-role {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+      display: block;
+      margin-top: 2px;
+    }
+
+    /* ─── BLOG ───────────────────────────────────────── */
+    #blog { background: var(--cream); }
+    .blog-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 3rem;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.75rem;
+    }
+    .blog-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--soil-100);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    .blog-thumb { height: 190px; overflow: hidden; }
+    .blog-thumb img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .blog-card:hover .blog-thumb img { transform: scale(1.06); }
+    .blog-body { padding: 1.5rem; }
+    .blog-cat {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--leaf-500);
+      margin-bottom: 0.6rem;
+    }
+    .blog-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--soil-900);
+      line-height: 1.35;
+      margin-bottom: 0.6rem;
+    }
+    .blog-excerpt {
+      font-size: 0.84rem;
+      color: var(--ink-soft);
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+    .blog-read {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--leaf-700);
+      transition: gap 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .blog-read:hover { gap: 8px; }
+
+    /* ─── CONTACT / ENQUIRY ─────────────────────────── */
+    #contact { background: var(--soil-50); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-info .section-title { margin-top: 0.5rem; }
+    .contact-info > p {
+      color: var(--ink-soft);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+      font-size: 0.97rem;
+    }
+
+    .contact-detail {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    .contact-icon {
+      width: 44px; height: 44px;
+      background: var(--leaf-50);
+      border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      border: 1px solid var(--leaf-100);
+    }
+    .contact-detail-info strong {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 3px;
+    }
+    .contact-detail-info span {
+      font-size: 0.92rem;
+      color: var(--ink-mid);
+      font-weight: 500;
+    }
+    .contact-detail-info a {
+      font-size: 0.92rem;
+      color: var(--leaf-700);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .contact-detail-info a:hover { color: var(--leaf-500); }
+
+    /* ── FORM CARD ── */
+    .enquiry-form-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      border: 1px solid var(--soil-100);
+      box-shadow: var(--shadow-sm);
+    }
+    .form-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--leaf-900);
+      margin-bottom: 0.4rem;
+    }
+    .form-sub {
+      font-size: 0.86rem;
+      color: var(--ink-soft);
+      margin-bottom: 2rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .form-group { margin-bottom: 1.1rem; }
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--ink-mid);
+      margin-bottom: 6px;
+      letter-spacing: 0.3px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 11px 15px;
+      border: 1.5px solid var(--soil-100);
+      border-radius: var(--radius-md);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.92rem;
+      color: var(--ink);
+      background: var(--cream);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+      appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--leaf-500);
+      box-shadow: 0 0 0 3px rgba(74,143,40,0.1);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+    .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236b6252' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 36px;
+    }
+
+    .form-submit-btn {
+      width: 100%;
+      padding: 14px;
+      background: var(--leaf-700);
+      color: white;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.97rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: background 0.22s, transform 0.22s, box-shadow 0.22s;
+      letter-spacing: 0.3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 0.5rem;
+    }
+    .form-submit-btn:hover {
+      background: var(--leaf-900);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .form-submit-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* form status messages */
+    .form-status {
+      padding: 12px 16px;
+      border-radius: var(--radius-md);
+      font-size: 0.88rem;
+      font-weight: 500;
+      margin-top: 1rem;
+      display: none;
+    }
+    .form-status.success {
+      background: var(--leaf-50);
+      color: var(--leaf-700);
+      border: 1px solid var(--leaf-100);
+      display: block;
+    }
+    .form-status.error {
+      background: #fff5f5;
+      color: #c0392b;
+      border: 1px solid #fccdd0;
+      display: block;
+    }
+
+    /* ─── FOOTER ─────────────────────────────────────── */
+    footer {
+      background: var(--soil-900);
+      padding: 4rem 0 2rem;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .footer-brand-desc {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.75;
+      max-width: 260px;
+    }
+    .footer-col-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 1.25rem;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li {
+      margin-bottom: 0.65rem;
+    }
+    .footer-col ul li a {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.5);
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: var(--gold-light); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* ─── SCROLL REVEAL ──────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* ─── RESPONSIVE ─────────────────────────────────── */
+    @media (max-width: 900px) {
+      .about-grid,
+      .contact-grid,
+      .footer-top { grid-template-columns: 1fr; }
+      .about-accent-card { position: relative; bottom: auto; right: auto; margin-top: 1rem; display: inline-block; }
+      .about-leaf-badge { display: none; }
+      .products-header,
+      .blog-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .contact-grid { gap: 2rem; }
+      .section-pad { padding: 4rem 0; }
+    }
+
+    @media (max-width: 600px) {
+      /* container */
+      .container { padding: 0 1.1rem; }
+
+      /* hero */
+      #hero { min-height: 100svh; align-items: flex-end; padding-bottom: 5rem; }
+      .hero-content { max-width: 100%; }
+      .hero-title { font-size: clamp(2.2rem, 9vw, 3rem); }
+      .hero-desc { font-size: 0.97rem; margin-bottom: 1.75rem; }
+      .hero-actions { flex-direction: column; gap: 0.75rem; }
+      .hero-actions .btn { width: 100%; justify-content: center; }
+      .hero-trust { gap: 0.9rem; }
+      .hero-trust-item { font-size: 0.78rem; }
+      .hero-pill { font-size: 0.65rem; padding: 6px 14px; }
+
+      /* stats */
+      .stats-row { flex-direction: column; gap: 0; }
+      .stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 1rem 1.5rem; width: 100%; }
+      .stat:last-child { border-bottom: none; }
+      .stat-num { font-size: 2.2rem; }
+
+      /* about */
+      .about-main-img { aspect-ratio: 4/3; }
+      .about-pillars { grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+
+      /* products */
+      .products-grid { grid-template-columns: 1fr; }
+
+      /* testimonials */
+      .testi-grid { grid-template-columns: 1fr; }
+
+      /* blog */
+      .blog-grid { grid-template-columns: 1fr; }
+
+      /* contact */
+      .form-row { grid-template-columns: 1fr; }
+      .enquiry-form-card { padding: 1.5rem; border-radius: var(--radius-lg); }
+      .section-pad { padding: 3rem 0; }
+
+      /* footer */
+      .footer-top { gap: 1.5rem; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+
+      /* section titles */
+      .section-title { font-size: clamp(1.7rem, 6vw, 2.2rem); }
+    }
+
+    @media (max-width: 380px) {
+      .hero-title { font-size: 2rem; }
+      .about-pillars { grid-template-columns: 1fr; }
+    }
+
+    /* Mobile nav open state */
+    .nav-links.open {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 70px; left: 0; right: 0;
+      background: var(--leaf-900);
+      padding: 2rem;
+      gap: 1.25rem;
+      z-index: 998;
+      box-shadow: var(--shadow-lg);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════ -->
+<nav id="navbar">
+  <a href="#" class="nav-brand">
+    <div class="nav-brand-icon">🌿</div>
+    <div>
+      <span class="nav-brand-name">Agri Biotech</span>
+      <span class="nav-brand-tagline">India · Sustainable Agriculture</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#testimonials">Farmers</a></li>
+    <li><a href="#blog">Insights</a></li>
+    <li><a href="#contact" class="nav-cta">Enquire Now</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg">
+    <img
+      class="hero-bg-img"
+      src="farmer.jpeg"
+      alt="Indian farmers in paddy field"
+      loading="eager"
+      fetchpriority="high"
+    >
+    <div class="hero-bg-overlay"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-pill">
+        <span class="hero-pill-dot"></span>
+        100% Organic · Zero Harmful Chemicals
+      </div>
+      <h1 class="hero-title">
+        Farming that<br>
+        <em>Nourishes</em> the Earth
+      </h1>
+      <p class="hero-desc">
+        Bio-organic fertilizers and natural pesticides crafted for Indian farmers — boosting yields, restoring soil health, and building a sustainable future.
+      </p>
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-gold">Explore Products</a>
+        <a href="#contact" class="btn btn-outline-white">Talk to Us</a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-trust-item"><span>✓</span> 198K+ Farmers Served</div>
+        <div class="hero-trust-item"><span>✓</span> West Bengal Based</div>
+        <div class="hero-trust-item"><span>✓</span> Research-Backed Formulas</div>
+      </div>
+    </div>
+  </div>
+  <svg class="hero-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#1b3a0f"/>
+  </svg>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     STATS
+═══════════════════════════════════════════ -->
+<section id="stats">
+  <div class="container">
+    <div class="stats-row">
+      <div class="stat reveal">
+        <span class="stat-num">198K+</span>
+        <span class="stat-label">Happy Farmers</span>
+      </div>
+      <div class="stat reveal reveal-delay-1">
+        <span class="stat-num">12+</span>
+        <span class="stat-label">Organic Products</span>
+      </div>
+      <div class="stat reveal reveal-delay-2">
+        <span class="stat-num">40%</span>
+        <span class="stat-label">Avg Yield Increase</span>
+      </div>
+      <div class="stat reveal reveal-delay-3">
+        <span class="stat-num">5+</span>
+        <span class="stat-label">States Reached</span>
+      </div>
+      <div class="stat reveal reveal-delay-3">
+        <span class="stat-num">0</span>
+        <span class="stat-label">Harmful Chemicals</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     ABOUT
+═══════════════════════════════════════════ -->
+<section id="about" class="section-pad">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-leaf-badge">🌱</div>
+        <img
+          class="about-main-img"
+          src="farmer2.jpeg"
+          alt="Farmer working in field"
+        >
+        <div class="about-accent-card">
+          <span class="about-accent-num">5+</span>
+          <span class="about-accent-label">Years serving<br>rural India</span>
+        </div>
+      </div>
+      <div class="about-text reveal reveal-delay-1">
+        <span class="eyebrow">Our Story</span>
+        <h2 class="section-title">Rooted in Science,<br>Grown for Farmers</h2>
+        <p>AgriBiotech-India was born from a simple belief: that Indian farmers deserve better than chemical inputs that damage their soil and health.</p>
+        <p>Based in Saradapally, Hooghly, West Bengal, we specialize in bio-organic fertilizers and natural pesticides — designed to replace harmful chemicals while dramatically improving crop yields and preserving biodiversity.</p>
+        <p>Our mission is to put cutting-edge agricultural biotechnology in the hands of rural farmers — affordably, accessibly, and sustainably.</p>
+        <div class="about-pillars">
+          <div class="pillar"><div class="pillar-icon">🌿</div> 100% Organic Inputs</div>
+          <div class="pillar"><div class="pillar-icon">🌍</div> Eco-Friendly</div>
+          <div class="pillar"><div class="pillar-icon">🔬</div> Research-Backed</div>
+          <div class="pillar"><div class="pillar-icon">👨‍🌾</div> Farmer-First</div>
+          <div class="pillar"><div class="pillar-icon">🌾</div> Higher Yields</div>
+          <div class="pillar"><div class="pillar-icon">💧</div> Soil Health Focus</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     PRODUCTS
+═══════════════════════════════════════════ -->
+<section id="products" class="section-pad">
+  <div class="container">
+    <div class="products-header">
+      <div class="reveal">
+        <span class="eyebrow">What We Offer</span>
+        <h2 class="section-title">Our Organic Range</h2>
+        <p class="section-sub">From soil enrichers to bio-pesticides, every product is built to give your crops the best — naturally.</p>
+      </div>
+      <a href="#contact" class="btn btn-green reveal">View All Products</a>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&q=80" alt="Bio Organic Fertilizer">
+          <span class="product-tag">Fertilizer</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Bio-Organic Fertilizer</div>
+          <p class="product-desc">Enriches soil with essential micronutrients and beneficial microbes. Improves water retention and root strength.</p>
+          <ul class="product-benefits">
+            <li>Boosts soil microbial activity</li>
+            <li>Improves water retention</li>
+            <li>Safe for all crops</li>
+          </ul>
+          <button class="product-enquire" onclick="scrollToEnquiry('Bio-Organic Fertilizer')">Enquire Now →</button>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-delay-1">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=400&q=80" alt="Neem Bio Pesticide">
+          <span class="product-tag">Pesticide</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Neem Bio-Pesticide</div>
+          <p class="product-desc">Protects crops from pests and fungal diseases without harming pollinators, soil fauna, or the food chain.</p>
+          <ul class="product-benefits">
+            <li>Polinator safe formula</li>
+            <li>Broad-spectrum protection</li>
+            <li>No chemical residues</li>
+          </ul>
+          <button class="product-enquire" onclick="scrollToEnquiry('Neem Bio-Pesticide')">Enquire Now →</button>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-delay-2">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&q=80" alt="Vermicompost">
+          <span class="product-tag">Soil Care</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Vermi-Compost Blend</div>
+          <p class="product-desc">Premium worm-cast enriched compost that restores degraded soils, boosts microbial activity, and feeds crops long-term.</p>
+          <ul class="product-benefits">
+            <li>Restores degraded land</li>
+            <li>Long-lasting nutrition</li>
+            <li>100% natural inputs</li>
+          </ul>
+          <button class="product-enquire" onclick="scrollToEnquiry('Vermi-Compost Blend')">Enquire Now →</button>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-delay-3">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=400&q=80" alt="Biostimulant">
+          <span class="product-tag">Growth</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Biostimulant Booster</div>
+          <p class="product-desc">Seaweed-extract based formula that accelerates germination, root development and flowering stages.</p>
+          <ul class="product-benefits">
+            <li>Faster germination</li>
+            <li>Stronger root growth</li>
+            <li>Seaweed-extract base</li>
+          </ul>
+          <button class="product-enquire" onclick="scrollToEnquiry('Biostimulant Booster')">Enquire Now →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     TESTIMONIALS
+═══════════════════════════════════════════ -->
+<section id="testimonials" class="section-pad">
+  <div class="container">
+    <div class="testi-header reveal">
+      <span class="eyebrow">Farmer Stories</span>
+      <h2 class="section-title" style="color:white;">Words from the Fields</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"After switching to Agri Biotech's fertilizers, my paddy yield went up by nearly 35% in just one season. My soil feels alive again — no more hard, cracked land."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👨‍🌾</div>
+          <div>
+            <span class="testi-name">Ratan Mondal</span>
+            <span class="testi-role">Paddy Farmer, Hooghly, WB</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The neem pesticide worked better than the chemicals I was using before — costs less too. My vegetables are pesticide-free and I get better prices at the market."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👩‍🌾</div>
+          <div>
+            <span class="testi-name">Savitri Devi</span>
+            <span class="testi-role">Vegetable Farmer, Bardhaman</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-2">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"I was skeptical at first, but the vermicompost blend turned my degraded land into productive soil within two seasons. I recommend it to every farmer in my village."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👨‍🌾</div>
+          <div>
+            <span class="testi-name">Suresh Patel</span>
+            <span class="testi-role">Mixed Crop Farmer, Nadia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     BLOG / INSIGHTS
+═══════════════════════════════════════════ -->
+<section id="blog" class="section-pad">
+  <div class="container">
+    <div class="blog-header">
+      <div class="reveal">
+        <span class="eyebrow">Farming Insights</span>
+        <h2 class="section-title">Tips from the Ground</h2>
+        <p class="section-sub">Practical knowledge to help every farmer grow smarter, greener, and more profitably.</p>
+      </div>
+      <a href="#" class="btn btn-green reveal">View All Posts</a>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card reveal">
+        <div class="blog-thumb">
+          <img src="https://images.unsplash.com/photo-1592419044706-39796d40f98c?w=500&q=80" alt="Soil Health">
+        </div>
+        <div class="blog-body">
+          <div class="blog-cat">Soil Health</div>
+          <div class="blog-title">Why Soil Microbiome is the Secret to High Yields</div>
+          <p class="blog-excerpt">Billions of microbes in healthy soil do more for your crop than any chemical. Here's how to protect and grow them.</p>
+          <a href="#" class="blog-read">Read more →</a>
+        </div>
+      </div>
+      <div class="blog-card reveal reveal-delay-1">
+        <div class="blog-thumb">
+          <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=500&q=80" alt="Organic Farming">
+        </div>
+        <div class="blog-body">
+          <div class="blog-cat">Organic Practices</div>
+          <div class="blog-title">How to Transition Your Farm to Organic in 3 Seasons</div>
+          <p class="blog-excerpt">A practical step-by-step guide for Indian farmers moving away from chemical inputs without losing yield.</p>
+          <a href="#" class="blog-read">Read more →</a>
+        </div>
+      </div>
+      <div class="blog-card reveal reveal-delay-2">
+        <div class="blog-thumb">
+          <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=500&q=80" alt="Pest Control">
+        </div>
+        <div class="blog-body">
+          <div class="blog-cat">Pest Management</div>
+          <div class="blog-title">Top 5 Bio-Pesticides Every Indian Farmer Should Know</div>
+          <p class="blog-excerpt">Affordable, effective, and safe natural pest control options for your farm and your family.</p>
+          <a href="#" class="blog-read">Read more →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CONTACT & ENQUIRY FORM
+     ── EmailJS Integration Zone ──
+═══════════════════════════════════════════ -->
+<section id="contact" class="section-pad">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Left: Contact Info -->
+      <div class="contact-info reveal">
+        <span class="eyebrow">Get In Touch</span>
+        <h2 class="section-title">Let's Grow Together</h2>
+        <p>Have a question about our products, want to become a dealer, or need advice for your farm? We're here to help farmers and partners across India.</p>
+
+        <div class="contact-detail">
+          <div class="contact-icon">📍</div>
+          <div class="contact-detail-info">
+            <strong>Address</strong>
+            <span>Saradapally, Tarakeswar,<br>Hooghly, West Bengal</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">📞</div>
+          <div class="contact-detail-info">
+            <strong>Phone</strong>
+            <a href="tel:+918411028760">+91 84110 28760</a><br>
+            <a href="tel:+919434401977">+91 94344 01977</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-detail-info">
+            <strong>Email</strong>
+            <a href="mailto:contact@agribiotech.co.in">contact@agribiotech.co.in</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">🕐</div>
+          <div class="contact-detail-info">
+            <strong>Hours</strong>
+            <span>Monday – Saturday, 9:00 AM – 6:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Enquiry Form -->
+      <div class="enquiry-form-card reveal reveal-delay-1">
+        <div class="form-title">Send an Enquiry</div>
+        <p class="form-sub">We'll get back to you within 24 hours.</p>
+
+        <!--
+          ════════════════════════════════════════════
+          EMAILJS INTEGRATION — HOW TO SET UP:
+          1. Go to https://www.emailjs.com/ and create a free account
+          2. Add an Email Service (Gmail, Outlook, etc.) → note the SERVICE_ID
+          3. Create an Email Template → note the TEMPLATE_ID
+             In your template, use these variables:
+             {{from_name}}, {{from_phone}}, {{from_email}},
+             {{interest}}, {{farm_location}}, {{message}}
+          4. Go to Account → API Keys → copy your Public Key
+          5. Replace in the <script> at top:  "YOUR_PUBLIC_KEY"
+          6. Replace below in sendEnquiry():
+             - "YOUR_SERVICE_ID"
+             - "YOUR_TEMPLATE_ID"
+          ════════════════════════════════════════════
+        -->
+
+        <form id="enquiryForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Full Name *</label>
+              <input type="text" id="fname" name="from_name" placeholder="e.g. Ratan Mondal" required>
+            </div>
+            <div class="form-group">
+              <label for="fphone">Phone Number *</label>
+              <input type="tel" id="fphone" name="from_phone" placeholder="+91 XXXXX XXXXX" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="femail">Email Address</label>
+            <input type="email" id="femail" name="from_email" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label for="finterest">I'm Interested In *</label>
+            <select id="finterest" name="interest" required>
+              <option value="">Select a product or topic...</option>
+              <option value="Bio-Organic Fertilizer">Bio-Organic Fertilizer</option>
+              <option value="Neem Bio-Pesticide">Neem Bio-Pesticide</option>
+              <option value="Vermi-Compost Blend">Vermi-Compost Blend</option>
+              <option value="Biostimulant Booster">Biostimulant Booster</option>
+              <option value="Dealership / Distribution">Dealership / Distribution</option>
+              <option value="General Enquiry">General Enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="flocation">Farm Location (Optional)</label>
+            <input type="text" id="flocation" name="farm_location" placeholder="e.g. Hooghly, West Bengal">
+          </div>
+          <div class="form-group">
+            <label for="fmessage">Your Message *</label>
+            <textarea id="fmessage" name="message" placeholder="Tell us about your farm and what you need..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit-btn" id="submitBtn">
+            <span id="btnText">Send Enquiry</span>
+            <span id="btnLoader" style="display:none;">Sending...</span>
+          </button>
+          <div class="form-status" id="formStatus"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">🌿 Agri Biotech India</div>
+        <p class="footer-brand-desc">Promoting ecologically sustainable agriculture through modern biotechnology — for the farmers, the soil, and the future.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Navigate</div>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#testimonials">Farmer Stories</a></li>
+          <li><a href="#blog">Insights</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Products</div>
+        <ul>
+          <li><a href="#products">Bio-Organic Fertilizer</a></li>
+          <li><a href="#products">Neem Bio-Pesticide</a></li>
+          <li><a href="#products">Vermi-Compost Blend</a></li>
+          <li><a href="#products">Biostimulant Booster</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Contact</div>
+        <ul>
+          <li><a href="mailto:contact@agribiotech.co.in">contact@agribiotech.co.in</a></li>
+          <li><a href="tel:+918411028760">+91 84110 28760</a></li>
+          <li><a href="#">Hooghly, West Bengal</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Agri Biotech India. All rights reserved.</span>
+      <span>Made with 🌱 for Indian Farmers</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════ -->
+<script>
+  /* ── Navbar scroll effect ── */
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
+  document.getElementById('navbar').classList.add('scrolled');
+
+  /* ── Mobile nav toggle ── */
+  function toggleNav() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+  document.querySelectorAll('#navLinks a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+  });
+
+  /* ── Scroll reveal ── */
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  /* ── Product enquiry shortcut ── */
+  function scrollToEnquiry(productName) {
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+      const sel = document.getElementById('finterest');
+      if (sel) sel.value = productName;
+    }, 600);
+  }
+
+  /* ══════════════════════════════════════════
+     EMAILJS FORM SUBMISSION
+     Replace SERVICE_ID and TEMPLATE_ID below
+  ══════════════════════════════════════════ */
+  document.getElementById('enquiryForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const btn     = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
+    const btnLoader = document.getElementById('btnLoader');
+    const status  = document.getElementById('formStatus');
+
+    // Basic validation
+    const name    = document.getElementById('fname').value.trim();
+    const phone   = document.getElementById('fphone').value.trim();
+    const interest = document.getElementById('finterest').value;
+    const message = document.getElementById('fmessage').value.trim();
+
+    if (!name || !phone || !interest || !message) {
+      status.className = 'form-status error';
+      status.textContent = '⚠️ Please fill in all required fields.';
+      return;
+    }
+
+    // Show loading state
+    btn.disabled = true;
+    btnText.style.display = 'none';
+    btnLoader.style.display = 'inline';
+    status.className = 'form-status';
+    status.style.display = 'none';
+
+    // ✅ EMAILJS SEND
+    // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual IDs
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+      .then(() => {
+        status.className = 'form-status success';
+        status.textContent = '✅ Thank you! We will get back to you within 24 hours.';
+        document.getElementById('enquiryForm').reset();
+      })
+      .catch((err) => {
+        console.error('EmailJS error:', err);
+        status.className = 'form-status error';
+        status.textContent = '❌ Something went wrong. Please call us directly at +91 84110 28760.';
+      })
+      .finally(() => {
+        btn.disabled = false;
+        btnText.style.display = 'inline';
+        btnLoader.style.display = 'none';
+      });
+  });
+</script>
+
+</body>
+</html>
