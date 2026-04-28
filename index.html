@@ -265,7 +265,7 @@
       display: flex;
       align-items: center;
       overflow: hidden;
-      padding-top: 80px;
+      padding-top: 100px;
       padding-bottom: 4rem;
     }
 
@@ -292,12 +292,12 @@
       background:
         linear-gradient(to right,
           rgba(8,18,4,1) 0%,
-          rgba(8,18,4,0.98) 30%,
-          rgba(8,18,4,0.85) 45%,
-          rgba(8,18,4,0.3) 65%,
-          rgba(8,18,4,0.05) 100%
+          rgba(8,18,4,0.96) 28%,
+          rgba(8,18,4,0.75) 44%,
+          rgba(8,18,4,0.15) 62%,
+          rgba(8,18,4,0.0) 100%
         ),
-        linear-gradient(to top, rgba(5,12,2,0.7) 0%, transparent 40%);
+        linear-gradient(to top, rgba(5,12,2,0.6) 0%, transparent 35%);
     }
 
     /* Two-column layout: text left, photo shows on right */
@@ -357,6 +357,7 @@
       margin-bottom: 1.25rem;
       letter-spacing: -0.5px;
       text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+      margin-bottom: 1.5rem;
     }
     .hero-title em {
       font-style: italic;
@@ -1011,7 +1012,7 @@
     /* ── Tablet (≤900px) ── */
     /* ── Desktop: show farmer's head in hero ── */
     @media (min-width: 601px) {
-      .hero-bg-img { object-position: center top; }
+      .hero-bg-img { object-position: center 15%; }
     }
 
     @media (max-width: 900px) {
